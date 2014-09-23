@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<display-name>EmploymentApplication</display-name>
+<welcome-file-list>
+<welcome-file>index.html</welcome-file>
+<welcome-file>index.htm</welcome-file>
+<welcome-file>index.jsp</welcome-file>
+<welcome-file>default.html</welcome-file>
+<welcome-file>default.htm</welcome-file>
+<welcome-file>default.jsp</welcome-file>
+</welcome-file-list>
+<session-config>
+<session-timeout>3</session-timeout>
+</session-config>
+<servlet>
+<servlet-name>statedb</servlet-name>
+<servlet-class>
+com.employmentapp.controller.StateControl
+</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>statedb</servlet-name>
+<url-pattern>/register</url-pattern>
+</servlet-mapping>
+<!-- ##################end of state db################## -->
+<!-- <servlet>
+<servlet-name>regist</servlet-name>
+<servlet-class>com.employmentapp.RegisterController</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>regist</servlet-name>
+<url-pattern>/test</url-pattern>
+</servlet-mapping> -->
+<!-- ##################end of register################## -->
+<servlet>
+<servlet-name>lgout</servlet-name>
+<servlet-class>com.employmentapp.controller.Logout</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>lgout</servlet-name>
+<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+<!-- ##################end of logout################## -->
+<servlet>
+<servlet-name>ureracc</servlet-name>
+<servlet-class>com.employmentapp.controller.RegisterController</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ureracc</servlet-name>
+<url-pattern>/account</url-pattern>
+</servlet-mapping>
+<!-- ##################end of user account ################## -->
+<!-- Home.jsp -->
+<servlet>
+<servlet-name>hm</servlet-name>
+<servlet-class>com.employmentapp.controller.LoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>hm</servlet-name>
+<url-pattern>/home</url-pattern>
+</servlet-mapping>
+<!-- ################## end of home ################## -->
+<!-- Balance.jsp -->
+<servlet>
+<servlet-name>bal</servlet-name>
+<servlet-class>com.employmentapp.controller.BalanceServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>bal</servlet-name>
+<url-pattern>/balance</url-pattern>
+</servlet-mapping>
+<!-- ################## end of balance ################## -->
+<!-- Amt Tranfer.jsp -->	
+<servlet>
+<servlet-name>transfer</servlet-name>
+<servlet-class>com.employmentapp.controller.TraferAmtControl</servlet-class>
+</servlet>	
+<servlet-mapping>
+<servlet-name>transfer</servlet-name>
+<url-pattern>/transact</url-pattern>
+</servlet-mapping>	
+<!-- ################## end of Amt transfer link################## -->
+<!-- Amt Transaction -->
+<servlet>
+<servlet-name>trans</servlet-name>
+<servlet-class>com.employmentapp.controller.AmtTransactionCtrl</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>trans</servlet-name>
+<url-pattern>/transfer</url-pattern>
+</servlet-mapping>
+<!-- ################## end of Amt transaction ################## -->
+<!-- Statment.jsp -->	
+<servlet>
+<servlet-name>stmts</servlet-name>
+<servlet-class>com.employmentapp.controller.StatementControl</servlet-class>
+</servlet>	
+<servlet-mapping>
+<servlet-name>stmts</servlet-name>
+<url-pattern>/statment</url-pattern>
+</servlet-mapping>	
+<!-- ################## end of statment ################## -->
+<!-- Date of transaction -->
+<servlet>
+<servlet-name>dtoftrans</servlet-name>
+<servlet-class>com.employmentapp.controller.DateofTransControler</servlet-class>
+</servlet>	
+<servlet-mapping>
+<servlet-name>dtoftrans</servlet-name>
+<url-pattern>/dot</url-pattern>
+</servlet-mapping>
+<!-- ################## Date of transaction ################## -->	
+<!-- Setting -->
+<servlet>
+<servlet-name>set</servlet-name>
+<servlet-class>com.employmentapp.controller.SettingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>set</servlet-name>
+<url-pattern>/setting</url-pattern>
+</servlet-mapping>
+<!-- ################## Setting ################## -->
+<!-- Update Setting -->
+<servlet>
+<servlet-name>updateset</servlet-name>
+<servlet-class>com.employmentapp.controller.UpdatesetControl</servlet-class>
+</servlet>	
+<servlet-mapping>
+<servlet-name>updateset</servlet-name>
+<url-pattern>/updated</url-pattern>
+</servlet-mapping>
+<!-- User Detail (My info) -->
+<servlet>
+<servlet-name>details</servlet-name>
+<servlet-class>com.employmentapp.controller.UsrDetailControl</servlet-class>
+</servlet>	
+<servlet-mapping>
+<servlet-name>details</servlet-name>
+<url-pattern>/detail</url-pattern>
+</servlet-mapping>
+<!-- ###################User Detail (My info)################### -->	
+<!-- Pay Bill -->
+<servlet>
+<servlet-name>billpay</servlet-name>
+<servlet-class>com.employmentapp.controller.PayBillServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>billpay</servlet-name>
+<url-pattern>/paybill</url-pattern>
+</servlet-mapping>
+<!-- Filter -->
+<filter>
+<filter-name>fltr</filter-name>
+<filter-class>com.employmentapp.utility.UrlFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>billpay</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>hm</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>bal</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>transfer</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>stmts</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>trans</servlet-name>
+</filter-mapping>	
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>dtoftrans</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>details</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>set</servlet-name>
+</filter-mapping>
+<filter-mapping>
+<filter-name>fltr</filter-name>
+<servlet-name>updateset</servlet-name>
+</filter-mapping>	
+<!-- Filter Ends -->
+</web-app>

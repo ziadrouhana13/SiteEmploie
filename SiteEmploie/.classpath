@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path=".classpath"/>
+	<classpathentry kind="lib" path=".settings/com.google.appengine.eclipse.core.prefs"/>
+	<classpathentry kind="lib" path=".settings/com.google.gdt.eclipse.core.prefs"/>
+	<classpathentry kind="lib" path=".settings/org.eclipse.jdt.core.prefs"/>
+	<classpathentry kind="lib" path=".settings/org.eclipse.wst.common.project.facet.core.xml"/>
+	<classpathentry kind="lib" path="/usr/share/java/mysql.jar"/>
+	<classpathentry kind="lib" path="/usr/share/java/mysql-connector-java.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>
